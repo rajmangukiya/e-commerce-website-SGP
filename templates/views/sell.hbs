@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sell.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- fixed -->
+  <header>
+    <div class="nav-bar">
+      <div class="logo">LOGO</div>
+      <ul class="nav-options">
+        <li class="nav-option">
+          <a href="home">Home</a>
+        </li>
+        <li class="nav-option switch">
+          <a href="#">Switch Account</a>
+          <div class="switch-box">
+            <div class="round"></div>
+            <ul class="switch-options">
+              <li class="switch-option">
+                <a href="sell">want to sell</a>
+              </li>
+              <div class="line"></div>
+              <li class="switch-option">
+                <a href="buy">want to buy</a>
+              </li>
+              <div class="line"></div>
+              <li class="switch-option">
+                <a href="#">want to deliver</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-option">
+          <a href="about_us">About Us</a>
+        </li>
+        <li class="nav-option">
+          <a href="contact_us">Contact Us</a>
+        </li>
+        <li class="nav-option sign_out">
+          <a href="signout">Sign out</a>
+        </li>
+      </ul>
+    </div>
+    <div class="login-background">
+      <div class="login-form">
+        <p1>Login</p1>
+        <div class="line"></div>
+        <div class="form">
+          <form action="/login" method="POST">
+            <div class="input-text">
+              <label for="email-id-login">YOUR EMAIL-ID*</label>
+              <input type="text" id="email-id-login" name="email" required>
+            </div>
+            <div class="input-text">
+              <label for="password-login">PASSWORD*</label>
+              <input type="password" id="password-login" name="password" required>
+            </div>
+            <input class="submit-button" type="submit" value="Login">
+            <div class="sign-in-link">new here? please sign in</div>
+          </form>
+          <div class="login-cross" data-form="login"></div>
+        </div>
+      </div>
+    </div>
+    <div class="create-background">
+      <div class="create-form">
+        <p1>Create Account</p1>
+        <div class="line"></div>
+        <div class="form">
+          <form action="/register" method="POST">
+            <div class="input-text">
+              <label for="name">YOUR NAME*</label>
+              <div class="full-text">
+                <input class="first" type="text" id="first-name" name="first_name" placeholder="First name" required>
+                <input class="last" type="text" id="last-name" name="last_name" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="input-text">
+              <label for="email-id-create">YOUR EMAIL-ID*</label>
+              <input class="input-text" type="email" id="email-id-create" name="email"
+                placeholder="Eg. example@gmail.com" required>
+            </div>
+            <div class="input-text">
+              <label for="number">MOBILE NUMBER*</label>
+              <input class="input-text" type="text" id="number" name="phone" value="+91" minlength="13" maxlength="13"
+                pattern="+,[0-9]" placeholder="Eg. +911234567890" required>
+            </div>
+            <div class="input-text">
+              <label for="password-create">PASSWORD*</label>
+              <input class="input-text" type="password" id="password-create" name="password" required>
+            </div>
+            <input class="submit-button" type="submit" value="Create">
+          </form>
+          <div class="create-cross" data-form="create"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- add product button -->
+  <div class="add-new">
+    <img src="images/plus.png" alt="add">
+  </div>
+
+  <!-- add product form -->
+  <div class="add-product-form">
+    <div class="product-form">
+      <form action="/sell" class="form" method="POST" enctype="multipart/form-data">
+        <div class="form-text">
+          <div class="part">
+            <h1>PRODUCT</h1>
+            
+            
+          <input class="add-file-hidden" type="file" name="image">
+            <!-- add photo -->
+             <div class="add-product-photo-container"> 
+               {{!-- <input type="file" name="image" required> --}} 
+               <div class="add-product-photo-box" type="file" name="image">
+                <div class="add-product-cross"></div>
+              </div> 
+
+              <div class="add-product-info-box">
+                <div class="add-product-name">
+                  product name
+                </div>
+                <div class="add-product-button">
+                  {{!-- <input type="file" name="" id=""> --}}
+                  <div class="button">Add</div>
+                </div>
+              </div>
+            </div>
+            <div class="product-input-text">
+              <label for="productName">Product Name</label>
+              <input type="text" name="product_name" id="poductName" placeholder="Product Name" required>
+            </div>
+            <div class="product-input-text">
+              <label for="productPrice">Product Price</label>
+              <input type="number" name="price" id="productPrice" placeholder="Product Price" required>
+            </div>
+          </div>
+          <div class="horizontal-line"></div>
+          <div class="part">
+            <h1>LOCATION</h1>
+            <div class="product-input-text">
+              <label for="country">Country</label>
+              <input type="text" name="country" id="country" placeholder="Country" required>
+            </div>
+            <div class="product-input-text">
+              <label for="state">State</label>
+              <input type="text" name="state" id="state" placeholder="State" required>
+            </div>
+            <div class="product-input-text">
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" placeholder="City" required>
+            </div>
+            <div class="product-input-text">
+              <label for="pincode">Pincode</label>
+              <input type="text" name="pincode" id="pincode" placeholder="Pincode" required>
+            </div>
+            <div class="product-input-text">
+              <label for="address">Address</label>
+              <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="product-form-submit">
+          <input type="submit" value="add product" required>
+        </div>
+        <div class="cross-box">
+          <div class="product-cross">
+            <img src="images/cross.png" alt="">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- not fixed -->
+  <div class="container">
+    {{#each sellRecords}}
+      <div class="sellor-product" id="product_004">
+        <div style="background-image: url('uploads/{{image}}');" class="sellor-product-image"></div>
+        <div class="sellor-product-name">{{product_name}}</div>
+        <div class="sellor-product-remove">{{price}}</div>
+      </div>
+    {{/each}} 
+  </div>
+
+  <footer>
+   {{> footer}}
+  </footer>
+  <script src="Java script/sell.js"></script>
+  <script src="Java script/javascript.js"></script>
+</body>
+
+</html>

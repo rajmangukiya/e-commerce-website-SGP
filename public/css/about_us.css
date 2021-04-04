@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    rgb(112, 112, 112),
+    rgb(186, 186, 186)
+  );
+}
+
+.about-text {
+  background-image: url('../images/about_us_background\ \(2\).jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 60px 0px 0px 0px;
+  width: 100%;
+  padding: 100px 0px 100px 100px;
+}
+
+.about-text>h1 {
+  color: rgb(189, 189, 189);
+  font-size: 50px;
+  letter-spacing: 20px;
+  margin-bottom: 50px;
+}
+
+.about-text>p {
+  color: rgb(216, 216, 216);
+  letter-spacing: 5px;
+  line-height: 35px;
+  font-size: 15px;
+}
+
+.who-we-are {
+  padding: 100px;
+}
+
+.who-we-are>h1 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 15px;
+  margin-bottom: 70px;
+}
+
+.who-we-are>p {
+  color: rgb(208, 208, 208);
+  letter-spacing: 5px;
+  line-height: 35px;
+  font-size: 15px;
+}
+
+.developers {
+  padding: 100px;
+}
+
+.developers>h1 {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 15px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.students {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.student {
+  background-color: rgb(0, 0, 0);
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 30px;
+  width:350px;
+  height: 500px;
+  filter: drop-shadow(30px 30px 15px rgb(45, 45, 45));
+}
+
+.student-circle {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 255, 247),
+    rgb(27, 27, 27)
+  );
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.student>p1 {
+  margin: 30px 0px;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: rgb(225, 225, 225);
+  text-align: center;
+  line-height: 50px;
+}
+
+.student>p {
+  color: rgb(104, 104, 104);
+  font-size: 17px;
+  letter-spacing: 4px;
+  line-height: 30px;
+}

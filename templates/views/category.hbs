@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+</head>
+<body>
+    <table class="table table-striped">
+
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% categories.forEach(function(cat) { %>
+            <tr>
+                <td><%= cat.title %></td>
+                <td><a href="./edit_category<%= cat.title %>">Edit</a></td>
+                <td><a class="confirmDeletion" href="./delete_category<%= cat._id %>">Delete</a></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

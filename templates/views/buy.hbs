@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/buy.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo">LOGO</div>
+      <ul class="nav-options">
+        <li class="nav-option">
+          <a href="home">Home</a>
+        </li>
+        <li class="nav-option switch">
+          <a href="#">Switch Account</a>
+          <div class="switch-box">
+            <div class="round"></div>
+            <ul class="switch-options">
+              <li class="switch-option">
+                <a href="sell">want to sell</a>
+              </li>
+              <div class="line"></div>
+              <li class="switch-option">
+                <a href="buy">want to buy</a>
+              </li>
+              <div class="line"></div>
+              <li class="switch-option">
+                <a href="#">want to deliver</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-option">
+          <a href="about_us">About Us</a>
+        </li>
+        <li class="nav-option">
+          <a href="contact_us">Contact Us</a>
+        </li>
+        <li class="nav-option sign_out">
+          <a href="signout">Sign out</a>
+        </li>
+      </ul>
+    </div>
+    <div class="login-background">
+      <div class="login-form">
+        <p1>Login</p1>
+        <div class="line"></div>
+        <div class="form">
+          <form action="/login" method="POST">
+            <div class="input-text">
+              <label for="email-id-login">YOUR EMAIL-ID*</label>
+              <input type="text" id="email-id-login" name="email" required>
+            </div>
+            <div class="input-text">
+              <label for="password-login">PASSWORD*</label>
+              <input type="password" id="password-login" name="password" required>
+            </div>
+            <input class="submit-button" type="submit" value="Login">
+            <div class="sign-in-link">new here? please sign in</div>
+          </form>
+          <div class="login-cross" data-form="login"></div>
+        </div>
+      </div>
+    </div>
+    <div class="create-background">
+      <div class="create-form">
+        <p1>Create Account</p1>
+        <div class="line"></div>
+        <div class="form">
+          <form action="/register" method="POST">
+            <div class="input-text">
+              <label for="name">YOUR NAME*</label>
+              <div class="full-text">
+                <input class="first" type="text" id="first-name" name="first_name" placeholder="First name" required>
+                <input class="last" type="text" id="last-name" name="last_name" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="input-text">
+              <label for="email-id-create">YOUR EMAIL-ID*</label>
+              <input class="input-text" type="email" id="email-id-create" name="email"
+                placeholder="Eg. example@gmail.com" required>
+            </div>
+            <div class="input-text">
+              <label for="number">MOBILE NUMBER*</label>
+              <input class="input-text" type="text" id="number" name="phone" value="+91" minlength="13" maxlength="13"
+                pattern="+,[0-9]" placeholder="Eg. +911234567890" required>
+            </div>
+            <div class="input-text">
+              <label for="password-create">PASSWORD*</label>
+              <input class="input-text" type="password" id="password-create" name="password" required>
+            </div>
+            <input class="submit-button" type="submit" value="Create">
+          </form>
+          <div class="create-cross" data-form="create"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="product" id="product_001">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    <div class="product" id="product_002">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    <div class="product" id="product_003">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    <div class="product" id="product_004">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    <div class="product" id="product_005">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    <div class="product" id="product_006">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    <div class="product" id="product_007">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    <div class="product" id="product_008">
+      <div class="product_image"></div>
+      <div class="product_name">Product name</div>
+      <div class="product_price">Rs. 10999</div>
+    </div>
+    {{#each sell}}
+        <img src="uploads/{{image}}" height="100px" width="200px">
+        {{price}}
+        {{country}}
+        {{city}}
+    {{/each}}
+  </div>
+
+  <footer>
+   {{> footer}}
+  </footer>
+</body>
+
+</html>
